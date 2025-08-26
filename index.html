@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adoura Ai</title>
+
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/docs/assets/images/logo.png" type="image/x-icon">
+
+    <!-- Styles & Scripts -->
+    <link rel="stylesheet" href="/docs/Style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.1/dist/lenis.css">
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- seo -->
+
+</head>
+
+<body class="overflow-x-hidden">
+    <div id="global-loader"
+        class="hi dden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
+        <div class="text-center">
+            <div class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-indigo-500 mx-auto"></div>
+            <h2 class="text-zinc-900  mt-4">Loading...</h2>
+            <!-- <p class="text-zinc-600">
+                Please wait while we brew something special for you.
+            </p> -->
+        </div>
+    </div>
+
+    <div id="bottomToTopScroll"></div>
+
+
+    <section class="relative overflow-x-hidden">
+        <img src="/docs/assets/images/dotted.png" class="absolute top-0 left-0 max-w-xs w-full opacity-20" alt="">
+        <img src="/docs/assets/images/dotted.png" class="absolute md:block hidden top-0 right-0 max-w-xs w-full opacity-20" alt="">
+        <div
+            class="bg-gradient-to-br from-purple-200 via-violet-400 to-indigo-600 w-full max-w-sm opacity-30 h-40 rounded-full absolute top-20 right-0 -z-1 blur-3xl">
+        </div>
+        <div
+            class="bg-gradient-to-br from-purple-200 via-violet-400 md:block hidden to-indigo-600 w-full max-w-sm opacity-30 h-40 rounded-full absolute top-20 left-0 -z-1 blur-3xl">
+        </div>
+        <div id="navbar"></div>
+        <section
+            class="relative overflow-hidden md:mt-36 mt-32 md:min-h-[calc(100vh-10rem)] min-h-[calc(100vh-5rem)] bg-center bg-cover py-10 md:pb-20">
+
+
+            <!-- Content -->
+            <div
+                class="relative z-20 mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 md:min-h-[calc(100vh-10rem)] min-h-[calc(100vh-5rem)] flex flex-col md:gap-20 gap-5 items-center justify-center">
+
+                <div class="md:max-w-4xl w-full text-center">
+                    <div class="flex">
+                        <p data-aos="fade-up" data-aos-delay="100"
+                            class="flex px-4 py-1 rounded-full items-center justify-center mx-auto gap-2.5 text-lg font-medium text-sm md:text-base glass text-zinc-800 md:mb-7 mb-5">
+                            <i class="fa-solid fa-star "></i>
+                            Trained with real conversations
+                        </p>
+                    </div>
+
+                    <h1 data-aos="fade-up" data-aos-delay="200"
+                        class="max-w-5xl textShadow mx-auto font-semibold text-3xl md:text-6xl text-zinc-800 leading-tight md:mb-2 capitalize md:mb-10 mb-8">
+                        Talk smarter. Win arguments. Impress dates.
+                    </h1>
+
+                    <p data-aos="fade-up" data-aos-delay="300" class="text-zinc-700 md:mb-7 mb-10 text-lg space-y-3">
+                        Adoura.ai gives you instant, context-aware responses for everyday social moments — from calm,
+                        persuasive
+                        comebacks to smooth rizz and smart date/gift ideas — trained with real conversations and priced
+                        to be the
+                        cheapest on the market.
+                    </p>
+
+                    <div data-aos="fade-up" data-aos-delay="300"
+                        class="flex items-center justify-center flex-col md:flex-row gap-5">
+                        <a href="#"
+                            class="w-full md:w-auto tracking-wider py-3.5 md:py-4 px-7 md:px-16 font-medium  text-white rounded-sm border-2 border-indigo-500 bg-indigo-500 hover:opacity-70 transition-all duration-500">
+                            See Features
+                        </a>
+                    </div>
+                </div>
+
+
+                <div
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
+                    <div data-aos="fade-up"  class="relative w-full h-auto md:col-span-2">
+                        <div class="bg-gray-800 rounded-2xl flex  justify-between flex-row flex-wrap">
+                            <div class="p-5  xl:p-8 w-full md:w-1/2 ">
+                                <div class="block">
+                                    <i class="fa-solid fa-gift text-white text-2xl"></i>
+                                </div>
+                                <h3 class="text-lg font-bold xl:text-xl text-white py-5 w-full xl:w-64">
+                                    AI Date & Gift Concierge
+                                </h3>
+                                <p class="text-xs font-normal text-gray-300 w-full mb-8 xl:w-64">
+                                    Curated date plans and gift ideas based on their interests, budget, and timing —
+                                    with ready-to-send
+                                    invites and scripts.
+                                </p>
+                                <button
+                                    class="py-2 px-5 border border-solid border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                                    Explore Ideas
+                                    <i class="fa-solid fa-arrow-right text-white "></i>
+                                </button>
+                            </div>
+                            <div class="relative hidden h-auto md:w-1/2 md:block">
+                                <img src="https://pagedone.io/asset/uploads/1695028873.png" alt="Adoura feature preview"
+                                    class="h-full ml-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="100" class="relative w-full h-auto">
+                        <div class="bg-indigo-500 rounded-2xl p-5  xl:p-8 h-full">
+                            <div class="block">
+                                <i class="fa-solid fa-scale-balanced text-white text-2xl"></i>
+                            </div>
+                            <h3 class="py-5 text-white text-lg font-bold xl:text-xl">Argument Response Generator</h3>
+                            <p class="text-xs font-normal text-white mb-8">
+                                Turn heated texts into calm, persuasive replies. De-escalate, align, and make your point
+                                clearly.
+                            </p>
+                            <button
+                                class="py-2 px-5 border border-solid border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                                See Examples
+                                <i class="fa-solid fa-arrow-right text-white "></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div data-aos="fade-up" data-aos-delay="200" class="relative w-full h-auto">
+                        <div class="bg-violet-500 rounded-2xl p-5 xl:p-8 h-full">
+                            <div class="block">
+                                <i class="fa-solid fa-heart text-white text-2xl"></i>
+                            </div>
+                            <h3 class="py-5 text-white text-lg font-bold xl:text-xl">Pick-Up Line Generator</h3>
+                            <p class="text-xs font-normal text-white mb-8">
+                                Openers tailored to your vibe and their profile — charm without cringe, in one tap.
+                            </p>
+                            <button
+                                class="py-2 px-5 border border-solid border-gray-300 rounded-full gap-2 text-xs text-white font-semibold flex items-center justify-between transition-all duration-500 hover:bg-white/5">
+                                Generate Lines
+                                <i class="fa-solid fa-arrow-right text-white "></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </section>
+
+
+    <div data-aos="fade-up" class="max-w-7xl w-full p-4 mx-auto md:mt-16 mt-10">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper ">
+
+                <div class="swiper-slide">
+                    <div class="w-full flex-col flex items-center justify-center gap-2 text-center">
+                        <h2 class="counter md:text-4xl text-3xl text-zinc-700 font-semibold">99%</h2>
+                        <p class="text-zinc-700 font-medium">User Satisfaction</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="w-full flex-col flex items-center justify-center gap-2 text-center">
+                        <h2 class="counter md:text-4xl text-3xl text-zinc-700 font-semibold">200k+</h2>
+                        <p class="text-zinc-700 font-medium">Daily Generations</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="w-full flex-col flex items-center justify-center gap-2 text-center">
+                        <h2 class="counter md:text-4xl text-3xl text-zinc-700 font-semibold">3.2M+</h2>
+                        <p class="text-zinc-700 font-medium">Conversations Assisted</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="w-full flex-col flex items-center justify-center gap-2 text-center">
+                        <h2 class="counter md:text-4xl text-3xl text-zinc-700 font-semibold">4</h2>
+                        <p class="text-zinc-700 font-medium">Core Tools Available</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="w-full flex-col flex items-center justify-center gap-2 text-center">
+                        <h2 class="counter md:text-4xl text-3xl text-zinc-700 font-semibold">60+</h2>
+                        <p class="text-zinc-700 font-medium">Countries Using Adoura</p>
+                    </div>
+                </div>
+
+                <div class="swiper-slide">
+                    <div class="w-full flex-col flex items-center justify-center gap-2 text-center">
+                        <h2 class="counter md:text-4xl text-3xl text-zinc-700 font-semibold">99.9%</h2>
+                        <p class="text-zinc-700 font-medium">Uptime Reliability</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <section id="features" class="max-w-7xl w-full mx-auto md:mt-24 mt-10 p-5">
+
+        <!-- Section Heading -->
+        <p data-aos="fade-up" class="text-center text-indigo-500 pb-2">
+            <span class="py-1 px-4 bg-indigo-100 rounded-full text-xs font-medium text-indigo-600 text-center">Powerful,
+                Real-World Features</span>
+        </p>
+
+        <h2 data-aos="fade-up"
+            class="text-center md:text-5xl text-2xl max-w-3xl capitalize leading-tight mx-auto font-semibold text-zinc-800">
+            Everything you need to text smarter
+        </h2>
+        <p data-aos="fade-up" class="text-zinc-600 max-w-3xl mx-auto pt-3 text-center">
+            Adoura.ai helps you handle everyday chats — persuasive comebacks, smooth openers, flowing banter, and
+            thoughtful plans — all fast, affordable, and privacy-first.
+        </p>
+
+        <div class="grid md:grid-cols-3 grid-cols-1 md:mt-20 mt-14 md:gap-y-14 gap-5">
+
+            <!-- Argument Response Generator -->
+            <div data-aos="fade-up">
+                <div class="flex flex-col justify-center p-5 md:py-10">
+                    <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-scale-balanced text-xl text-indigo-500"></i>
+                    </div>
+                    <h2 class="text-xl mt-6 font-medium text-zinc-800">
+                        Argument Response Generator
+                    </h2>
+                    <p class="text-zinc-600 mt-1 text-sm">
+                        Turn heated messages into calm, persuasive replies with empathy-first, logic-backed drafts.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Rizz Assist (highlight card) -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <div class="flex flex-col bg-indigo-500 rounded-xl justify-center p-5 md:py-10">
+                    <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-bolt text-xl text-zinc-800"></i>
+                    </div>
+                    <h2 class="text-xl mt-6 font-medium text-zinc-100">
+                        Rizz Assist — Live Suggestions
+                    </h2>
+                    <p class="text-zinc-200 mt-1 text-sm">
+                        Keep the convo flowing with real-time options (safe, witty, bold) you can copy or refine.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pick-Up Line Generator -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col justify-center p-5 md:py-10">
+                    <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-heart text-xl text-indigo-500"></i>
+                    </div>
+                    <h2 class="text-xl mt-6 font-medium text-zinc-800">
+                        Pick-Up Line Generator
+                    </h2>
+                    <p class="text-zinc-600 mt-1 text-sm">
+                        Openers tailored to your vibe and their interests — charm without the cringe.
+                    </p>
+                </div>
+            </div>
+
+            <!-- AI Date & Gift Concierge -->
+            <div data-aos="fade-up">
+                <div class="flex flex-col justify-center p-5 md:py-10">
+                    <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-gift text-xl text-indigo-500"></i>
+                    </div>
+                    <h2 class="text-xl mt-6 font-medium text-zinc-800">
+                        AI Date & Gift Concierge
+                    </h2>
+                    <p class="text-zinc-600 mt-1 text-sm">
+                        Curated plans and gift ideas by budget, timing, and interests — with ready-to-send scripts.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Tone & Style Controls -->
+            <div data-aos="fade-up" data-aos-delay="100">
+                <div class="flex flex-col justify-center p-5 md:py-10">
+                    <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-sliders text-xl text-indigo-500"></i>
+                    </div>
+                    <h2 class="text-xl mt-6 font-medium text-zinc-800">
+                        Tone & Style Controls
+                    </h2>
+                    <p class="text-zinc-600 mt-1 text-sm">
+                        Dial it in: calm ↔ witty ↔ bold, emoji on/off, and length control for any situation.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Privacy & Data Control -->
+            <div data-aos="fade-up" data-aos-delay="200">
+                <div class="flex flex-col justify-center p-5 md:py-10">
+                    <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
+                        <i class="fa-solid fa-shield-halved text-xl text-indigo-500"></i>
+                    </div>
+                    <h2 class="text-xl mt-6 font-medium text-zinc-800">
+                        Privacy-First & Data Delete
+                    </h2>
+                    <p class="text-zinc-600 mt-1 text-sm">
+                        Your chats are yours. Encrypted by default with easy one-tap delete and opt-out of training.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section id="pricing" class="md:mt-24 mt-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-12">
+                <h2 data-aos="fade-up"  class="md:text-5xl text-4xl text-center font-semibold text-gray-800 mb-4">Choose your plan</h2>
+                <p data-aos="fade-up"  class="text-gray-500 text-center leading-6 mb-9">Start free — no credit card required.</p>
+                <!--Switch-->
+                <div  data-aos="fade-up"  class="flex justify-center items-center">
+                    <label class="min-w-[3.5rem] text-xl relative text-gray-900 mr-4">Bill Monthly</label>
+                    <input type="checkbox" id="basic-with-description"
+                        class="relative shrink-0 w-11 h-6 p-0.5 bg-indigo-100 checked:bg-none checked:bg-indigo-100 rounded-full cursor-pointer transition-colors ease-in-out duration-200  focus:border-blue-600  appearance-none 
+                        before:inline-block before:w-5 before:h-5 before:bg-indigo-600 checked:before:bg-indigo-600 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform  before:transition before:ease-in-out before:duration-200 ">
+                    <label class="relative min-w-[3.5rem] text-xl text-gray-500 ml-4 ">
+                        Bill Yearly
+                    </label>
+                </div>
+                <!--Switch End-->
+            </div>
+            <!--Grid-->
+            <div class="space-y-8 gap-4 lg:grid lg:grid-cols-3 lg:space-y-0 lg:items-center">
+                <!--Pricing Card: Free-->
+                <div data-aos="fade-up" 
+                    class="flex w-full flex-col mx-auto text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-10 transition-all duration-500 hover:bg-gray-100">
+                    <h3 class=" text-2xl font-medium mb-3">Free</h3>
+                    <div class="flex items-center mb-6">
+                        <span class=" mr-2 text-5xl font-medium">$0</span>
+                        <span class="text-xl text-gray-500 ">/ month</span>
+                    </div>
+                    <!--List-->
+                    <ul class="mb-7 space-y-6 text-left text-lg text-gray-500">
+                        <li class="flex items-center space-x-4">
+                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <span>15 suggestions / day</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <span>Access to all 4 tools</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <span>Standard speed</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <span>Community support</span>
+                        </li>
+                    </ul>
+                    <a href="javascript:;"
+                        class="py-2.5 px-5 w-full bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Get
+                        Started</a>
+                    <!--List End-->
+                </div>
+                <!--Pricing Card: Pro-->
+                <div data-aos="fade-up"  data-aos-delay="100"
+                    class="flex flex-col w-full mx-auto text-gray-900 rounded-2xl bg-indigo-50 transition-all duration-500 hover:bg-indigo-100 ">
+                    <div
+                        class="uppercase bg-gradient-to-r from-indigo-600 to-violet-600 rounded-t-2xl p-4 text-center text-white">
+                        MOST POPULAR
+                    </div>
+                    <div class="p-6 xl:py-9 xl:px-10">
+                        <h3 class=" text-2xl font-medium mb-3">Pro</h3>
+                        <div class="flex items-center mb-6">
+                            <span class=" mr-2 text-5xl font-medium text-indigo-600">$9</span>
+                            <span class="text-xl text-gray-500 ">/ month</span>
+                        </div>
+                        <!--List-->
+                        <ul class="mb-7 space-y-6 text-left text-lg ">
+                            <li class="flex items-center space-x-4">
+                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <span>Unlimited suggestions</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <span>Faster responses</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <span>Tone & style presets</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <span>Priority support</span>
+                            </li>
+                            <li class="flex items-center space-x-4">
+                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <span>One-tap rephrase</span>
+                            </li>
+                        </ul>
+                        <a href="javascript:;"
+                            class="py-2.5 px-5 w-full bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit block mx-auto hover:bg-indigo-700">Upgrade
+                            to Pro</a>
+                        <!--List End-->
+                    </div>
+                </div>
+                <!--Pricing Card: Ultimate-->
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="flex flex-col mx-auto text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-10 transition-all duration-500 hover:bg-gray-100">
+                    <h3 class=" text-2xl font-medium mb-3">Ultimate</h3>
+                    <div class="flex items-center mb-6">
+                        <span class=" mr-2 text-5xl font-medium">$19</span>
+                        <span class="text-xl text-gray-500 ">/ month</span>
+                    </div>
+                    <!--List-->
+                    <ul class="mb-7 space-y-6 text-left text-lg text-gray-500">
+                        <li class="flex items-center space-x-4">
+                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <span>Everything in Pro</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <span>Fastest responses</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <span>Advanced safety & spice controls</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <span>Early-access features</span>
+                        </li>
+                    </ul>
+                    <a href="javascript:;"
+                        class="py-2.5 px-5 w-full bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Go
+                        Ultimate</a>
+                    <!--List End-->
+                </div>
+            </div>
+            <!--Grid End-->
+
+        </div>
+    </section>
+
+    <section class="py-20 md:mt-32 mt-12 bg-gray-50">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center md:gap-20 gap-1 flex-col lg:flex-row md:mt-20">
+                <div class="w-full lg:w-1/2">
+                    <h2 data-aos="fade-up" 
+                        class="md:text-5xl text-4xl text-zinc-800 font-semibold md:leading-[4rem] mb-7 text-center lg:text-left">
+                        Built by humans. Tuned for real conversations.
+                    </h2>
+                    <p data-aos="fade-up"  class="text-lg text-gray-500 mb-10 text-center lg:text-left">
+                        We’re a focused team crafting Adoura.ai — practical AI that helps you send persuasive comebacks,
+                        smooth openers, and thoughtful plans. Privacy-first, blazing fast, and priced for everyone.
+                    </p>
+                    <button data-aos="fade-up" 
+                        class="cursor-pointer py-3 px-8 w-60 bg-indigo-600 text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">
+                        Our Story
+                    </button>
+                </div>
+                <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 md:mt-16 mt-10 max-lg:max-w-2xl">
+                    <div class="grid grid-cols-2 min-[450px]:grid-cols-2 md:grid-cols-3 md:gap-8 gap-2">
+                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238644.png" alt="Team tailwind section"
+                            class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0" />
+                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238665.png" alt="Team tailwind section"
+                            class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto" />
+                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238684.png" alt="Team tailwind section"
+                            class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0" />
+                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238702.png" alt="Team tailwind section"
+                            class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0 md:ml-auto" />
+                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238720.png" alt="Team tailwind section"
+                            class="w-44 h-56 rounded-2xl object-cover md:-mt-20 mx-auto min-[450px]:mr-0 md:mx-auto" />
+                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238737.png" alt="Team tailwind section"
+                            class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="md:mt-24 mt-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div class="mb-14 text-center">
+                <span data-aos="fade-up"  class="py-1 px-4 bg-indigo-100 rounded-full text-xs font-medium text-indigo-600 text-center">Why
+                    Adoura.ai</span>
+                <h2 data-aos="fade-up"  class="text-4xl md:text-5xl text-center font-semibold text-zinc-800 py-5">
+                    Built for real-life conversations
+                </h2>
+                <p data-aos="fade-up" class="text-lg font-normal text-gray-500 max-w-md md:max-w-2xl mx-auto">
+                    From persuasive comebacks to smooth openers and thoughtful plans, Adoura.ai helps you respond fast,
+                    naturally, and privately — trained with real conversations.
+                </p>
+            </div>
+            <div 
+                class="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+                <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4" data-aos="fade-up" >
+                    <div 
+                        class="bg-indigo-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600">
+                        <svg class="stroke-indigo-600 transition-all duration-500 group-hover:stroke-white" width="30"
+                            height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M10 27.5L15 25M15 25V21.25M15 25L20 27.5M8.75 14.375L12.5998 11.0064C13.1943 10.4862 14.1163 10.6411 14.5083 11.327L15.4917 13.048C15.8837 13.7339 16.8057 13.8888 17.4002 13.3686L21.25 10M2.5 2.5H27.5M26.25 2.5V13.25C26.25 17.0212 26.25 18.9069 25.0784 20.0784C23.9069 21.25 22.0212 21.25 18.25 21.25H11.75C7.97876 21.25 6.09315 21.25 4.92157 20.0784C3.75 18.9069 3.75 17.0212 3.75 13.25V2.5"
+                                stroke="" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
+                        De-escalation Engine
+                    </h4>
+                    <p class="text-sm font-normal text-gray-500">
+                        Turn tense texts into calm, persuasive replies with empathy-first, logic-backed drafts.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="100" class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                    <div
+                        class="bg-pink-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-pink-600">
+                        <svg class="stroke-pink-600 transition-all duration-500 group-hover:stroke-white" width="30"
+                            height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M2.5 7.5C2.5 4.73858 4.73858 2.5 7.5 2.5C10.2614 2.5 12.5 4.73858 12.5 7.5C12.5 10.2614 10.2614 12.5 7.5 12.5C4.73858 12.5 2.5 10.2614 2.5 7.5Z"
+                                stroke="" stroke-width="2"></path>
+                            <path
+                                d="M2.5 22.5C2.5 20.143 2.5 18.9645 3.23223 18.2322C3.96447 17.5 5.14298 17.5 7.5 17.5C9.85702 17.5 11.0355 17.5 11.7678 18.2322C12.5 18.9645 12.5 20.143 12.5 22.5C12.5 24.857 12.5 26.0355 11.7678 26.7678C11.0355 27.5 9.85702 27.5 7.5 27.5C5.14298 27.5 3.96447 27.5 3.23223 26.7678C2.5 26.0355 2.5 24.857 2.5 22.5Z"
+                                stroke="" stroke-width="2"></path>
+                            <path
+                                d="M17.5 7.5C17.5 5.14298 17.5 3.96447 18.2322 3.23223C18.9645 2.5 20.143 2.5 22.5 2.5C24.857 2.5 26.0355 2.5 26.7678 3.23223C27.5 3.96447 27.5 5.14298 27.5 7.5C27.5 9.85702 27.5 11.0355 26.7678 11.7678C26.0355 12.5 24.857 12.5 22.5 12.5C20.143 12.5 18.9645 12.5 18.2322 11.7678C17.5 11.0355 17.5 9.85702 17.5 7.5Z"
+                                stroke="" stroke-width="2"></path>
+                            <path
+                                d="M17.5 22.5C17.5 19.7386 19.7386 17.5 22.5 17.5C25.2614 17.5 27.5 19.7386 27.5 22.5C27.5 25.2614 25.2614 27.5 22.5 27.5C19.7386 27.5 17.5 25.2614 17.5 22.5Z"
+                                stroke="" stroke-width="2"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
+                        Works Where You Chat
+                    </h4>
+                    <p class="text-sm font-normal text-gray-500">
+                        Copy-paste friendly suggestions for WhatsApp, iMessage, Instagram DMs and more.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="200" class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                    <div
+                        class="bg-teal-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-teal-600">
+                        <svg class="stroke-teal-600 transition-all duration-500 group-hover:stroke-white" width="30"
+                            height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M3.75 26.25H26.25M6.25 22.875C4.86929 22.875 3.75 21.8676 3.75 20.625V12.75C3.75 11.5074 4.86929 10.5 6.25 10.5C7.63071 10.5 8.75 11.5074 8.75 12.75V20.625C8.75 21.8676 7.63071 22.875 6.25 22.875ZM15 22.875C13.6193 22.875 12.5 21.8676 12.5 20.625V9.375C12.5 8.13236 13.6193 7.125 15 7.125C16.3807 7.125 17.5 8.13236 17.5 9.375V20.625C17.5 21.8676 16.3807 22.875 15 22.875ZM23.75 22.875C22.3693 22.875 21.25 21.8676 21.25 20.625V6C21.25 4.75736 22.3693 3.75 23.75 3.75C25.1307 3.75 26.25 4.75736 26.25 6V20.625C26.25 21.8676 25.1307 22.875 23.75 22.875Z"
+                                stroke="" stroke-width="2" stroke-linecap="round"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
+                        Conversation Insights
+                    </h4>
+                    <p class="text-sm font-normal text-gray-500">
+                        Learn what tone and length work best for you and keep a consistent voice across chats.
+                    </p>
+                </div>
+                <div data-aos="fade-up" data-aos-delay="300" class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                    <div
+                        class="bg-orange-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-orange-600">
+                        <svg class="stroke-orange-600 transition-all duration-500 group-hover:stroke-white" width="30"
+                            height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M15.4167 12.0833V21.25M5.41667 21.25V20.8333C5.41667 19.262 5.41667 18.4763 5.90482 17.9882C6.39298 17.5 7.17865 17.5 8.75 17.5H22.0833C23.6547 17.5 24.4404 17.5 24.9285 17.9882C25.4167 18.4763 25.4167 19.262 25.4167 20.8333V21.25M15.4167 9.16667C13.8453 9.16667 13.0596 9.16667 12.5715 8.67851C12.0833 8.19036 12.0833 7.40468 12.0833 5.83333C12.0833 4.26198 12.0833 3.47631 12.5715 2.98816C13.0596 2.5 13.8453 2.5 15.4167 2.5C16.988 2.5 17.7737 2.5 18.2618 2.98816C18.75 3.47631 18.75 4.26198 18.75 5.83333C18.75 7.40468 18.75 8.19036 18.2618 8.67851C17.7737 9.16667 16.988 9.16667 15.4167 9.16667ZM7.08333 25.8333C7.08333 26.7538 6.33714 27.5 5.41667 27.5C4.49619 27.5 3.75 26.7538 3.75 25.8333C3.75 24.9129 4.49619 24.1667 5.41667 24.1667C6.33714 24.1667 7.08333 24.9129 7.08333 25.8333ZM17.0833 25.8333C17.0833 26.7538 16.3371 27.5 15.4167 27.5C14.4962 27.5 13.75 26.7538 13.75 25.8333C13.75 24.9129 14.4962 24.1667 15.4167 24.1667C16.3371 24.1667 17.0833 24.9129 17.0833 25.8333ZM27.0833 25.8333C27.0833 26.7538 26.3371 27.5 25.4167 27.5C24.4962 27.5 23.75 26.7538 23.75 25.8333C23.75 24.9129 24.4962 24.1667 25.4167 24.1667C26.3371 24.1667 27.0833 24.9129 27.0833 25.8333Z"
+                                stroke="" stroke-width="2" stroke-linecap="round"></path>
+                        </svg>
+                    </div>
+                    <h4 class="text-lg font-medium text-gray-900 mb-3 capitalize">
+                        Tone & Safety Controls
+                    </h4>
+                    <p class="text-sm font-normal text-gray-500">
+                        Dial witty ↔ bold, toggle emoji and length, and keep safety filters on when you need them.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section class="md:mt-32 mt-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div
+                class="xl:p-24 md:gap-32 p-12 md:px-12 px-5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 flex justify-between flex-col-reverse lg:flex-row">
+                <div class="w-full lg:w-2/6 relative">
+                    <img data-aos="fade-up"  src="https://pagedone.io/asset/uploads/1696241449.png" alt="Adoura.ai app preview"
+                        class="xl:absolute xl:bottom-0 rounded-t-3xl -mb-12 mx-auto lg:-mb-12 xl:-mb-24 lg:mx-0 object-cover" />
+                </div>
+                <div class="w-full lg:w-2/3">
+                    <h2 data-aos="fade-up"  class="md:text-5xl text-4xl text-white font-medium mb-7 text-center lg:text-left">
+                        Talk smarter in seconds.
+                    </h2>
+                    <p data-aos="fade-up" class="text-lg text-white leading-8 mb-12 text-center lg:text-left">
+                        Adoura.ai gives you calm, persuasive comebacks, smooth openers, and thoughtful date & gift ideas
+                        —
+                        <span class="font-semibold">trained with real conversations</span> and priced to be the
+                        <span class="font-semibold">cheapest on the market</span>. Start free — no credit card needed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faq" class="md:mt-32 mt-12">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <div
+                class="flex flex-col justify-center items-center gap-y-5 xl:gap-12 gap-8 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
+                <div class="w-full lg:w-1/2">
+                    <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696230182.png" alt="FAQ tailwind section"
+                        class="w-full rounded-xl object-cover" />
+                </div>
+                <div class="w-full lg:w-1/2">
+                    <div class="">
+                        <div class="">
+                            <h6 data-aos="fade-up"  class="text-lg text-center font-medium text-indigo-600 mb-2 lg:text-left">
+                                faqs
+                            </h6>
+                            <h2 data-aos="fade-up" 
+                                class="text-4xl md:text-4xl text-center font-semibold text-zinc-800 md:leading-[3.25rem] mb-5 lg:text-left">
+                                Looking for answers?
+                            </h2>
+                        </div>
+                        <div class="md:mt-8 mt-5">
+                            <!-- FAQ 1 -->
+                            <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6"
+                                data-aos="fade-up">
+                                <button onclick="toggleAccordion(1)"
+                                    class="w-full cursor-pointer flex justify-between items-center">
+                                    <p class="text-lg text-start font-medium">What is Adoura.ai?</p>
+                                    <i id="icon-1"
+                                        class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                                </button>
+                                <div id="content-1"
+                                    class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                    <p class="pt-3 text-zinc-600">
+                                        Adoura.ai is a social-conversation toolkit that helps you craft persuasive
+                                        comebacks, smooth pick-up lines,
+                                        flowing “rizz” replies, and smart date & gift ideas. It runs in your
+                                        browser—just paste your context and copy the
+                                        responses you like.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 2 -->
+                            <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5"
+                                data-aos="fade-up">
+                                <button onclick="toggleAccordion(2)"
+                                    class="w-full cursor-pointer flex justify-between items-center">
+                                    <p class="text-lg text-start font-medium">How do I use it?</p>
+                                    <i id="icon-2"
+                                        class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                                </button>
+                                <div id="content-2"
+                                    class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                    <p class="pt-3 text-zinc-600">
+                                        Describe your situation (or paste a snippet), pick a mode — Argument Generator,
+                                        Pick-Up Lines, Rizz Assist, or
+                                        Date & Gift Concierge — and get 3 options to copy, edit, or regenerate. Tone and
+                                        length controls are built in.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 3 -->
+                            <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5"
+                                data-aos="fade-up">
+                                <button onclick="toggleAccordion(3)"
+                                    class="w-full cursor-pointer flex justify-between items-center">
+                                    <p class="text-lg text-start font-medium">Is my data private?</p>
+                                    <i id="icon-3"
+                                        class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                                </button>
+                                <div id="content-3"
+                                    class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                    <p class="pt-3 text-zinc-600">
+                                        Yes. We’re privacy-first: your chats aren’t sold, you can one-tap delete
+                                        history, and you can opt out of training.
+                                        We use secure transport and sensible retention so you stay in control.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 4 -->
+                            <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5"
+                                data-aos="fade-up">
+                                <button onclick="toggleAccordion(4)"
+                                    class="w-full cursor-pointer flex justify-between items-center">
+                                    <p class="text-lg text-start font-medium">Is there a free plan?</p>
+                                    <i id="icon-4"
+                                        class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                                </button>
+                                <div id="content-4"
+                                    class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                    <p class="pt-3 text-zinc-600">
+                                        Yes. Start free with daily limits and access to all four tools — no credit card
+                                        required. Upgrade anytime for
+                                        unlimited generations, faster responses, and more controls.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 5 -->
+                            <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5"
+                                data-aos="fade-up">
+                                <button onclick="toggleAccordion(5)"
+                                    class="w-full cursor-pointer flex justify-between items-center">
+                                    <p class="text-lg text-start font-medium">Where can I use Adoura.ai?</p>
+                                    <i id="icon-5"
+                                        class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                                </button>
+                                <div id="content-5"
+                                    class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                    <p class="pt-3 text-zinc-600">
+                                        Anywhere you can paste text — WhatsApp, iMessage, Instagram DMs, email, and
+                                        more. Use the web app today; extensions
+                                        and deeper integrations are planned.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- FAQ 6 -->
+                            <div class="bg-white border border-solid border-gray-200 rounded-2xl p-6 mt-5"
+                                data-aos="fade-up">
+                                <button onclick="toggleAccordion(6)"
+                                    class="w-full cursor-pointer flex justify-between items-center">
+                                    <p class="text-lg text-start font-medium">How does billing & upgrades work?</p>
+                                    <i id="icon-6"
+                                        class="fa-solid fa-angle-down text-gray-600 transition-transform duration-300"></i>
+                                </button>
+                                <div id="content-6"
+                                    class="max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                                    <p class="pt-3 text-zinc-600">
+                                        Choose monthly or yearly plans (Free, Pro, Ultimate). Payments are handled
+                                        securely via Stripe. You can upgrade,
+                                        downgrade, or cancel anytime, with a 7-day refund window on paid plans.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="md:max-w-7xl lg:px-12 p-4 w-full mx-auto lg:mt-24 mt-12">
+        <h2 class="lg:text-5xl max-w-3xl mx-auto capitalize lg:leading-[3.5rem] text-center text-3xl font-semibold text-zinc-700"
+            data-aos="fade-up">What users say
+        </h2>
+        <p class="text-center text-zinc-600 mt-5 max-w-4xl mx-auto md:text-lg" data-aos="fade-up">
+            Real feedback from people leveling up their chats with <strong>Adoura.ai</strong>.
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:mt-16 mt-8">
+
+            <!-- Review 1 -->
+            <div data-aos="fade-up"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="flex items-center gap-1">
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                </div>
+                <p class="text-zinc-600 mt-5">
+                    “Rizz Assist kept the convo flowing when I froze. It gave me 3 options—picked one, instant vibe
+                    shift.”
+                </p>
+            </div>
+
+            <!-- Review 2 -->
+            <div data-aos="fade-up" data-aos-delay="100"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="flex items-center gap-1">
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                </div>
+                <p class="text-zinc-600 mt-5">
+                    “Argument Response Generator turned a heated work thread into a calm, clear message. De-escalated in
+                    seconds.”
+                </p>
+            </div>
+
+            <!-- Review 3 -->
+            <div data-aos="fade-up" data-aos-delay="200"
+                class="relative border border-solid border-gray-200 rounded-2xl p-4 transition-all duration-500 xl:p-5">
+                <div class="flex items-center gap-1">
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                    <i class="fa-solid fa-star text-yellow-500 text-lg"></i>
+                </div>
+                <p class="text-zinc-600 mt-5">
+                    “The Date & Gift Concierge nailed it—personal, budget-friendly ideas plus a script to send. Zero
+                    stress.”
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="bg-zinc-100 pt-5 md:mt-20 mt-10" id="footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.3.1/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="./docs/javascript/global.js"></script>
+    <script src="./docs/javascript/navbar.js"></script>
+    <script src="./docs/javascript/footer.js"></script>
+    <script>
+
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            breakpoints: {
+                0: {
+                    slidesPerView: 1
+                },
+                640: {
+                    slidesPerView: 2
+                },
+                768: {
+                    slidesPerView: 4
+                },
+                1024: {
+                    slidesPerView: 5
+                }
+            },
+            navigation: {
+                nextEl: ".button-next",
+                prevEl: ".button-prev",
+            },
+            autoplay: {
+                delay: 3000,
+            },
+            loop: true,
+        });
+    </script>
+</body>
+
+</html>
