@@ -6,7 +6,7 @@ const bottomToTopScroll = document.getElementById("bottomToTopScroll");
 
 bottomToTopScroll.innerHTML = `
 <div
-    class="bottomToTop fadeIn w-12 cursor-pointer z-40 bg-indigo-500 h-12 fixed bottom-5 right-5 hover:opacity-80 transition-all duration-500 hidden text-zinc-100 flex items-center justify-center rounded-full "><i class="fa-solid fa-angle-up"></i>
+    class="bottomToTop fadeIn w-12 cursor-pointer z-40 bg-[#335cff] h-12 fixed bottom-5 right-5 hover:opacity-80 transition-all duration-500 hidden text-zinc-100 flex items-center justify-center rounded-full "><i class="fa-solid fa-angle-up"></i>
 </div>`
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -71,3 +71,64 @@ function toggleAccordion(index) {
         icon.classList.add('rotate-180')
     }
 }
+
+(function () {
+    const tabs = document.querySelectorAll('#how-it-works .step-item');
+    const img = document.getElementById('stepScreenshot');
+    const cap = document.getElementById('stepCaption');
+
+    // Preload
+    tabs.forEach(btn => { const i = new Image(); i.src = btn.dataset.screenshot; });
+
+    function setActive(tab) {
+        tabs.forEach(t => t.setAttribute('aria-selected', 'false'));
+        tab.setAttribute('aria-selected', 'true');
+
+        img.style.opacity = 0;
+        const nextSrc = tab.dataset.screenshot;
+        const nextCap = tab.dataset.caption || '';
+        setTimeout(() => {
+            img.src = nextSrc;
+            cap.textContent = nextCap;
+            img.onload = () => (img.style.opacity = 1);
+        }, 150);
+    }
+
+    // 🔹 Initialize from the tab marked aria-selected="true" (or first tab)
+    const initial = document.querySelector('#how-it-works .step-item[aria-selected="true"]') || tabs[0];
+    if (initial) setActive(initial);
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => setActive(tab));
+        tab.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setActive(tab); }
+        });
+    });
+})();
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    breakpoints: {
+        0: {
+            slidesPerView: 1
+        },
+        640: {
+            slidesPerView: 2
+        },
+        768: {
+            slidesPerView: 4
+        },
+        1024: {
+            slidesPerView: 5
+        }
+    },
+    navigation: {
+        nextEl: ".button-next",
+        prevEl: ".button-prev",
+    },
+    autoplay: {
+        delay: 3000,
+    },
+    loop: true,
+});

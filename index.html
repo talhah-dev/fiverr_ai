@@ -27,7 +27,7 @@
     <div id="global-loader"
         class="hi dden transition-opacity duration-300 opacity-0 fixed inset-0 bg-zinc-100 flex justify-center items-center z-50">
         <div class="text-center">
-            <div class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-indigo-500 mx-auto"></div>
+            <div class="w-16 h-16 border-4 border-dashed rounded-full animate-spin border-[#335cff] mx-auto"></div>
             <h2 class="text-zinc-900  mt-4">Loading...</h2>
             <!-- <p class="text-zinc-600">
                 Please wait while we brew something special for you.
@@ -39,13 +39,17 @@
 
 
     <section class="relative overflow-x-hidden">
-        <img src="/docs/assets/images/dotted.png" class="absolute top-0 left-0 max-w-xs w-full opacity-20" alt="">
-        <img src="/docs/assets/images/dotted.png" class="absolute md:block hidden top-0 right-0 max-w-xs w-full opacity-20" alt="">
+        <img src="/docs/assets/images/dotted.png" class="absolute top-0 left-0 max-w-[15rem] w-full opacity-20" alt="">
+        <img src="/docs/assets/images/dotted.png"
+            class="absolute md:block hidden top-0 right-0 max-w-[15rem] w-full opacity-20" alt="">
         <div
-            class="bg-gradient-to-br from-purple-200 via-violet-400 to-indigo-600 w-full max-w-sm opacity-30 h-40 rounded-full absolute top-20 right-0 -z-1 blur-3xl">
+            class="bg-gradient-to-br from-purple-200 via-violet-400 to-[#335cff] w-full max-w-sm opacity-30 h-40 rounded-full absolute top-20 right-0 -z-1 blur-3xl">
         </div>
+
+
+
         <div
-            class="bg-gradient-to-br from-purple-200 via-violet-400 md:block hidden to-indigo-600 w-full max-w-sm opacity-30 h-40 rounded-full absolute top-20 left-0 -z-1 blur-3xl">
+            class="bg-gradient-to-br from-purple-200 via-violet-400 md:block hidden to-[#335cff] w-full max-w-sm opacity-30 h-40 rounded-full absolute top-20 left-0 -z-1 blur-3xl">
         </div>
         <div id="navbar"></div>
         <section
@@ -54,13 +58,23 @@
 
             <!-- Content -->
             <div
-                class="relative z-20 mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 md:min-h-[calc(100vh-10rem)] min-h-[calc(100vh-5rem)] flex flex-col md:gap-20 gap-5 items-center justify-center">
+                class="relative z-20 mx-auto max-w-7xl px-5 sm:px-6 lg:px-12 md:min-h-[calc(100vh-10rem)] min-h-[calc(100vh-5rem)] flex relative flex-col md:gap-14 gap-5 items-center justify-center">
+
+                <script type="module"
+                    src="https://unpkg.com/@splinetool/viewer@1.10.51/build/spline-viewer.js"></script>
+                <div class="max-w-[30rem] w-full absolute md:block hidden top-10 right-4">
+                    <div class="relative">
+                        <div class="w-40 h-16 bg-white z-40 absolute bottom-1 right-0"></div>
+                        <spline-viewer
+                            url="https://prod.spline.design/YaIXAHGdWACdXNfR/scene.splinecode"></spline-viewer>
+                    </div>
+                </div>
 
                 <div class="md:max-w-4xl w-full text-center">
                     <div class="flex">
                         <p data-aos="fade-up" data-aos-delay="100"
                             class="flex px-4 py-1 rounded-full items-center justify-center mx-auto gap-2.5 text-lg font-medium text-sm md:text-base glass text-zinc-800 md:mb-7 mb-5">
-                            <i class="fa-solid fa-star "></i>
+                            <i class="fa-solid animate-spin fa-star [animation-duration:10s]"></i>
                             Trained with real conversations
                         </p>
                     </div>
@@ -81,16 +95,15 @@
                     <div data-aos="fade-up" data-aos-delay="300"
                         class="flex items-center justify-center flex-col md:flex-row gap-5">
                         <a href="#"
-                            class="w-full md:w-auto tracking-wider py-3.5 md:py-4 px-7 md:px-16 font-medium  text-white rounded-sm border-2 border-indigo-500 bg-indigo-500 hover:opacity-70 transition-all duration-500">
+                            class="w-full md:w-auto tracking-wider py-3.5 md:py-4 px-7 md:px-16 font-medium  text-white rounded-sm border-2 border-[#335cff] bg-[#335cff] hover:opacity-70 transition-all duration-500">
                             See Features
                         </a>
                     </div>
                 </div>
 
-
                 <div
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
-                    <div data-aos="fade-up"  class="relative w-full h-auto md:col-span-2">
+                    <div data-aos="fade-up" class="relative w-full h-auto md:col-span-2">
                         <div class="bg-gray-800 rounded-2xl flex  justify-between flex-row flex-wrap">
                             <div class="p-5  xl:p-8 w-full md:w-1/2 ">
                                 <div class="block">
@@ -117,7 +130,7 @@
                         </div>
                     </div>
                     <div data-aos="fade-up" data-aos-delay="100" class="relative w-full h-auto">
-                        <div class="bg-indigo-500 rounded-2xl p-5  xl:p-8 h-full">
+                        <div class="bg-[#335cff] rounded-2xl p-5  xl:p-8 h-full">
                             <div class="block">
                                 <i class="fa-solid fa-scale-balanced text-white text-2xl"></i>
                             </div>
@@ -211,8 +224,8 @@
     <section id="features" class="max-w-7xl w-full mx-auto md:mt-24 mt-10 p-5">
 
         <!-- Section Heading -->
-        <p data-aos="fade-up" class="text-center text-indigo-500 pb-2">
-            <span class="py-1 px-4 bg-indigo-100 rounded-full text-xs font-medium text-indigo-600 text-center">Powerful,
+        <p data-aos="fade-up" class="text-center text-[#335cff] pb-2">
+            <span class="py-1 px-4 bg-blue-100 rounded-full text-xs font-medium text-[#335cff] text-center">Powerful,
                 Real-World Features</span>
         </p>
 
@@ -231,7 +244,7 @@
             <div data-aos="fade-up">
                 <div class="flex flex-col justify-center p-5 md:py-10">
                     <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
-                        <i class="fa-solid fa-scale-balanced text-xl text-indigo-500"></i>
+                        <i class="fa-solid fa-scale-balanced text-xl text-[#335cff]"></i>
                     </div>
                     <h2 class="text-xl mt-6 font-medium text-zinc-800">
                         Argument Response Generator
@@ -244,7 +257,7 @@
 
             <!-- Rizz Assist (highlight card) -->
             <div data-aos="fade-up" data-aos-delay="100">
-                <div class="flex flex-col bg-indigo-500 rounded-xl justify-center p-5 md:py-10">
+                <div class="flex flex-col bg-[#335cff] rounded-xl justify-center p-5 md:py-10">
                     <div class="w-16 h-16 bg-white rounded-xl flex items-center justify-center">
                         <i class="fa-solid fa-bolt text-xl text-zinc-800"></i>
                     </div>
@@ -261,7 +274,7 @@
             <div data-aos="fade-up" data-aos-delay="200">
                 <div class="flex flex-col justify-center p-5 md:py-10">
                     <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
-                        <i class="fa-solid fa-heart text-xl text-indigo-500"></i>
+                        <i class="fa-solid fa-heart text-xl text-[#335cff]"></i>
                     </div>
                     <h2 class="text-xl mt-6 font-medium text-zinc-800">
                         Pick-Up Line Generator
@@ -276,7 +289,7 @@
             <div data-aos="fade-up">
                 <div class="flex flex-col justify-center p-5 md:py-10">
                     <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
-                        <i class="fa-solid fa-gift text-xl text-indigo-500"></i>
+                        <i class="fa-solid fa-gift text-xl text-[#335cff]"></i>
                     </div>
                     <h2 class="text-xl mt-6 font-medium text-zinc-800">
                         AI Date & Gift Concierge
@@ -291,7 +304,7 @@
             <div data-aos="fade-up" data-aos-delay="100">
                 <div class="flex flex-col justify-center p-5 md:py-10">
                     <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
-                        <i class="fa-solid fa-sliders text-xl text-indigo-500"></i>
+                        <i class="fa-solid fa-sliders text-xl text-[#335cff]"></i>
                     </div>
                     <h2 class="text-xl mt-6 font-medium text-zinc-800">
                         Tone & Style Controls
@@ -306,7 +319,7 @@
             <div data-aos="fade-up" data-aos-delay="200">
                 <div class="flex flex-col justify-center p-5 md:py-10">
                     <div class="w-16 h-16 bg-indigo-50 rounded-xl flex items-center justify-center">
-                        <i class="fa-solid fa-shield-halved text-xl text-indigo-500"></i>
+                        <i class="fa-solid fa-shield-halved text-xl text-[#335cff]"></i>
                     </div>
                     <h2 class="text-xl mt-6 font-medium text-zinc-800">
                         Privacy-First & Data Delete
@@ -324,14 +337,16 @@
     <section id="pricing" class="md:mt-24 mt-12">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mb-12">
-                <h2 data-aos="fade-up"  class="md:text-5xl text-4xl text-center font-semibold text-gray-800 mb-4">Choose your plan</h2>
-                <p data-aos="fade-up"  class="text-gray-500 text-center leading-6 mb-9">Start free — no credit card required.</p>
+                <h2 data-aos="fade-up" class="md:text-5xl text-4xl text-center font-semibold text-gray-800 mb-4">Choose
+                    your plan</h2>
+                <p data-aos="fade-up" class="text-gray-500 text-center leading-6 mb-9">Start free — no credit card
+                    required.</p>
                 <!--Switch-->
-                <div  data-aos="fade-up"  class="flex justify-center items-center">
+                <div data-aos="fade-up" class="flex justify-center items-center">
                     <label class="min-w-[3.5rem] text-xl relative text-gray-900 mr-4">Bill Monthly</label>
                     <input type="checkbox" id="basic-with-description"
                         class="relative shrink-0 w-11 h-6 p-0.5 bg-indigo-100 checked:bg-none checked:bg-indigo-100 rounded-full cursor-pointer transition-colors ease-in-out duration-200  focus:border-blue-600  appearance-none 
-                        before:inline-block before:w-5 before:h-5 before:bg-indigo-600 checked:before:bg-indigo-600 before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform  before:transition before:ease-in-out before:duration-200 ">
+                        before:inline-block before:w-5 before:h-5 before:bg-[#335cff] checked:before:bg-[#335cff] before:translate-x-0 checked:before:translate-x-full before:shadow before:rounded-full before:transform  before:transition before:ease-in-out before:duration-200 ">
                     <label class="relative min-w-[3.5rem] text-xl text-gray-500 ml-4 ">
                         Bill Yearly
                     </label>
@@ -341,7 +356,7 @@
             <!--Grid-->
             <div class="space-y-8 gap-4 lg:grid lg:grid-cols-3 lg:space-y-0 lg:items-center">
                 <!--Pricing Card: Free-->
-                <div data-aos="fade-up" 
+                <div data-aos="fade-up"
                     class="flex w-full flex-col mx-auto text-gray-900 rounded-2xl bg-gray-50 p-6 xl:py-9 xl:px-10 transition-all duration-500 hover:bg-gray-100">
                     <h3 class=" text-2xl font-medium mb-3">Free</h3>
                     <div class="flex items-center mb-6">
@@ -351,65 +366,65 @@
                     <!--List-->
                     <ul class="mb-7 space-y-6 text-left text-lg text-gray-500">
                         <li class="flex items-center space-x-4">
-                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                             <span>15 suggestions / day</span>
                         </li>
                         <li class="flex items-center space-x-4">
-                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                             <span>Access to all 4 tools</span>
                         </li>
                         <li class="flex items-center space-x-4">
-                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                             <span>Standard speed</span>
                         </li>
                         <li class="flex items-center space-x-4">
-                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                             <span>Community support</span>
                         </li>
                     </ul>
                     <a href="javascript:;"
-                        class="py-2.5 px-5 w-full bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Get
+                        class="py-2.5 px-5 w-full bg-[#335cff] shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Get
                         Started</a>
                     <!--List End-->
                 </div>
                 <!--Pricing Card: Pro-->
-                <div data-aos="fade-up"  data-aos-delay="100"
+                <div data-aos="fade-up" data-aos-delay="100"
                     class="flex flex-col w-full mx-auto text-gray-900 rounded-2xl bg-indigo-50 transition-all duration-500 hover:bg-indigo-100 ">
                     <div
-                        class="uppercase bg-gradient-to-r from-indigo-600 to-violet-600 rounded-t-2xl p-4 text-center text-white">
+                        class="uppercase bg-gradient-to-r from-[#335cff] to-blue-800 rounded-t-2xl p-4 text-center text-white">
                         MOST POPULAR
                     </div>
                     <div class="p-6 xl:py-9 xl:px-10">
                         <h3 class=" text-2xl font-medium mb-3">Pro</h3>
                         <div class="flex items-center mb-6">
-                            <span class=" mr-2 text-5xl font-medium text-indigo-600">$9</span>
+                            <span class=" mr-2 text-5xl font-medium text-[#335cff]">$9</span>
                             <span class="text-xl text-gray-500 ">/ month</span>
                         </div>
                         <!--List-->
                         <ul class="mb-7 space-y-6 text-left text-lg ">
                             <li class="flex items-center space-x-4">
-                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                                 <span>Unlimited suggestions</span>
                             </li>
                             <li class="flex items-center space-x-4">
-                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                                 <span>Faster responses</span>
                             </li>
                             <li class="flex items-center space-x-4">
-                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                                 <span>Tone & style presets</span>
                             </li>
                             <li class="flex items-center space-x-4">
-                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                                 <span>Priority support</span>
                             </li>
                             <li class="flex items-center space-x-4">
-                                <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                                <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                                 <span>One-tap rephrase</span>
                             </li>
                         </ul>
                         <a href="javascript:;"
-                            class="py-2.5 px-5 w-full bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit block mx-auto hover:bg-indigo-700">Upgrade
+                            class="py-2.5 px-5 w-full bg-[#335cff] shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit block mx-auto hover:bg-indigo-700">Upgrade
                             to Pro</a>
                         <!--List End-->
                     </div>
@@ -425,24 +440,24 @@
                     <!--List-->
                     <ul class="mb-7 space-y-6 text-left text-lg text-gray-500">
                         <li class="flex items-center space-x-4">
-                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                             <span>Everything in Pro</span>
                         </li>
                         <li class="flex items-center space-x-4">
-                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                             <span>Fastest responses</span>
                         </li>
                         <li class="flex items-center space-x-4">
-                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                             <span>Advanced safety & spice controls</span>
                         </li>
                         <li class="flex items-center space-x-4">
-                            <i class="fa-regular fa-circle-check text-indigo-500 text-xl"></i>
+                            <i class="fa-regular fa-circle-check text-[#335cff] text-xl"></i>
                             <span>Early-access features</span>
                         </li>
                     </ul>
                     <a href="javascript:;"
-                        class="py-2.5 px-5 w-full bg-indigo-600 shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Go
+                        class="py-2.5 px-5 w-full bg-[#335cff] shadow-sm rounded-full transition-all duration-500 text-base text-white font-semibold text-center w-fit mx-auto hover:bg-indigo-700">Go
                         Ultimate</a>
                     <!--List End-->
                 </div>
@@ -452,36 +467,114 @@
         </div>
     </section>
 
+    <section class="max-w-7xl w-full mx-auto md:mt-24 mt-10 p-5">
+
+        <!-- Section Heading -->
+        <p data-aos="fade-up" class="text-center text-[#335cff] pb-2">
+            <span class="py-1 px-4 bg-blue-100 rounded-full text-xs font-medium text-[#335cff] text-center">viral
+                clips</span>
+        </p>
+
+        <h2 data-aos="fade-up"
+            class="text-center md:text-5xl text-2xl max-w-3xl capitalize leading-tight mx-auto font-semibold text-zinc-800">
+            Create viral clips in 3 simple steps
+
+
+        </h2>
+        <p data-aos="fade-up" class="text-zinc-600 max-w-3xl mx-auto pt-3 text-center">
+            Never manually stitch a clip or generate subtitles by hand ever again.
+        </p>
+
+        <div id="how-it-works" class="md:mt-16 mt-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-10 gap-5 items-start">
+                <!-- Steps (left) -->
+                <div class="space-y-4" role="tablist" aria-label="Get a response in 3 simple steps">
+                    <!-- STEP 1 -->
+                    <button
+                        class="step-item w-full text-left rounded-2xl border border-gray-200 p-5 md:py-7 hover:border-blue-300 transition-all duration-300 aria-selected:border-[#335cff] aria-selected:bg-blue-50"
+                        role="tab" aria-selected="true" data-step="1" data-screenshot="/docs/assets/images/step1.png"
+                        data-caption="Paste your chat or describe the situation — Adoura.ai understands context.">
+                        <p class="text-xs font-semibold tracking-wider text-[#335cff]">STEP 1</p>
+                        <h3 class="mt-1 text-xl font-semibold text-zinc-800">Paste context or describe</h3>
+                        <p class="mt-2 text-zinc-600 text-sm">Drop in a snippet/screenshots or write what’s going on. No
+                            fluff, just the facts.</p>
+                    </button>
+
+                    <!-- STEP 2 -->
+                    <button
+                        class="step-item w-full text-left rounded-2xl border border-gray-200 p-5 md:py-7 hover:border-blue-300 transition-all duration-300"
+                        role="tab" aria-selected="false" data-step="2" data-screenshot="/docs/assets/images/step2.png"
+                        data-caption="Choose a mode: Arguments, Pick-Up Lines, Rizz Assist, or Date & Gift Concierge. Tune tone, length & emoji.">
+                        <p class="text-xs font-semibold tracking-wider text-[#335cff]">STEP 2</p>
+                        <h3 class="mt-1 text-xl font-semibold text-zinc-800">Pick a mode & tune tone</h3>
+                        <p class="mt-2 text-zinc-600 text-sm">Arguments • Pick-Up Lines • Rizz Assist • Date & Gift
+                            Concierge — with calm/witty/bold controls.</p>
+                    </button>
+
+                    <!-- STEP 3 -->
+                    <button
+                        class="step-item w-full text-left rounded-2xl border border-gray-200 p-5 md:py-7 hover:border-blue-300 transition-all duration-300"
+                        role="tab" aria-selected="false" data-step="3" data-screenshot="/docs/assets/images/step3.png"
+                        data-caption="Get 3 options instantly. Copy, refine, and send — privacy-first, no card needed to try.">
+                        <p class="text-xs font-semibold tracking-wider text-[#335cff]">STEP 3</p>
+                        <h3 class="mt-1 text-xl font-semibold text-zinc-800">Copy, refine & send</h3>
+                        <p class="mt-2 text-zinc-600 text-sm">We generate three replies. Pick one, tweak if needed, and
+                            ship it with confidence.</p>
+                    </button>
+                </div>
+
+                <!-- Screenshot (right) -->
+                <div class="relative rounded-2xl border border-gray-200 bg-white p-4 lg:p-6">
+                    <div class="aspect-[16/11] w-full overflow-hidden rounded-xl bg-gray-50">
+                        <img id="stepScreenshot" src="/docs/assets/images/step1.png" alt="Step preview"
+                            class="h-full w-full object-cover opacity-100 transition-opacity duration-300">
+                    </div>
+                    <p id="stepCaption" class="mt-4 text-sm text-zinc-600">
+                        Paste your chat or describe the situation — Adoura.ai understands context.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
     <section class="py-20 md:mt-32 mt-12 bg-gray-50">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center md:gap-20 gap-1 flex-col lg:flex-row md:mt-20">
                 <div class="w-full lg:w-1/2">
-                    <h2 data-aos="fade-up" 
+                    <h2 data-aos="fade-up"
                         class="md:text-5xl text-4xl text-zinc-800 font-semibold md:leading-[4rem] mb-7 text-center lg:text-left">
                         Built by humans. Tuned for real conversations.
                     </h2>
-                    <p data-aos="fade-up"  class="text-lg text-gray-500 mb-10 text-center lg:text-left">
+                    <p data-aos="fade-up" class="text-lg text-gray-500 mb-10 text-center lg:text-left">
                         We’re a focused team crafting Adoura.ai — practical AI that helps you send persuasive comebacks,
                         smooth openers, and thoughtful plans. Privacy-first, blazing fast, and priced for everyone.
                     </p>
-                    <button data-aos="fade-up" 
-                        class="cursor-pointer py-3 px-8 w-60 bg-indigo-600 text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">
+                    <button data-aos="fade-up"
+                        class="cursor-pointer py-3 px-8 w-60 bg-[#335cff] text-white text-base font-semibold transition-all duration-500 block text-center rounded-full hover:bg-indigo-700 mx-auto lg:mx-0">
                         Our Story
                     </button>
                 </div>
                 <div class="w-full lg:w-1/2 lg:mt-0 md:mt-40 md:mt-16 mt-10 max-lg:max-w-2xl">
                     <div class="grid grid-cols-2 min-[450px]:grid-cols-2 md:grid-cols-3 md:gap-8 gap-2">
-                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238644.png" alt="Team tailwind section"
+                        <img data-aos="zoom-in" src="https://pagedone.io/asset/uploads/1696238644.png"
+                            alt="Team tailwind section"
                             class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0" />
-                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238665.png" alt="Team tailwind section"
+                        <img data-aos="zoom-in" src="https://pagedone.io/asset/uploads/1696238665.png"
+                            alt="Team tailwind section"
                             class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mx-auto" />
-                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238684.png" alt="Team tailwind section"
+                        <img data-aos="zoom-in" src="https://pagedone.io/asset/uploads/1696238684.png"
+                            alt="Team tailwind section"
                             class="w-44 h-56 rounded-2xl object-cover md:mt-20 mx-auto min-[450px]:mr-0 md:ml-0" />
-                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238702.png" alt="Team tailwind section"
+                        <img data-aos="zoom-in" src="https://pagedone.io/asset/uploads/1696238702.png"
+                            alt="Team tailwind section"
                             class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0 md:ml-auto" />
-                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238720.png" alt="Team tailwind section"
+                        <img data-aos="zoom-in" src="https://pagedone.io/asset/uploads/1696238720.png"
+                            alt="Team tailwind section"
                             class="w-44 h-56 rounded-2xl object-cover md:-mt-20 mx-auto min-[450px]:mr-0 md:mx-auto" />
-                        <img data-aos="zoom-in"  src="https://pagedone.io/asset/uploads/1696238737.png" alt="Team tailwind section"
+                        <img data-aos="zoom-in" src="https://pagedone.io/asset/uploads/1696238737.png"
+                            alt="Team tailwind section"
                             class="w-44 h-56 rounded-2xl object-cover mx-auto min-[450px]:ml-0 md:mr-0" />
                     </div>
                 </div>
@@ -489,12 +582,33 @@
         </div>
     </section>
 
+    <section class="max-w-7xl w-full mx-auto md:mt-24 mt-10 p-5">
+
+        <p data-aos="fade-up" class="text-center text-[#335cff] pb-2">
+            <span class="py-1 px-4 bg-blue-100 rounded-full text-xs font-medium text-[#335cff] text-center">Top
+                Trends</span>
+        </p>
+
+        <h2 data-aos="fade-up"
+            class="text-center md:text-5xl text-2xl max-w-3xl capitalize leading-tight mx-auto font-semibold text-zinc-800">
+            Keep up with trends and Go Viral
+        </h2>
+        <p data-aos="fade-up" class="text-zinc-600 max-w-3xl mx-auto pt-3 text-center">
+            Never manually stitch a clip or generate subtitles by hand ever again.
+        </p>
+
+        <div data-aos="zoom-in" class="max-w- 5xl mx-auto md:mt-10 mt-8 w-full p-4 rounded-2xl bg-zinc-200">
+            <img src="/docs/assets/images/img.png" class="w-full  rounded-2xl " alt="">
+        </div>
+    </section>
+
     <section class="md:mt-24 mt-12">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div class="mb-14 text-center">
-                <span data-aos="fade-up"  class="py-1 px-4 bg-indigo-100 rounded-full text-xs font-medium text-indigo-600 text-center">Why
+                <span data-aos="fade-up"
+                    class="py-1 px-4 bg-blue-100 rounded-full text-xs font-medium text-[#335cff] text-center">Why
                     Adoura.ai</span>
-                <h2 data-aos="fade-up"  class="text-4xl md:text-5xl text-center font-semibold text-zinc-800 py-5">
+                <h2 data-aos="fade-up" class="text-4xl md:text-5xl text-center font-semibold text-zinc-800 py-5">
                     Built for real-life conversations
                 </h2>
                 <p data-aos="fade-up" class="text-lg font-normal text-gray-500 max-w-md md:max-w-2xl mx-auto">
@@ -502,12 +616,13 @@
                     naturally, and privately — trained with real conversations.
                 </p>
             </div>
-            <div 
+            <div
                 class="flex justify-center items-center gap-x-5 gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
-                <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4" data-aos="fade-up" >
-                    <div 
-                        class="bg-indigo-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-indigo-600">
-                        <svg class="stroke-indigo-600 transition-all duration-500 group-hover:stroke-white" width="30"
+                <div class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4"
+                    data-aos="fade-up">
+                    <div
+                        class="bg-indigo-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-[#335cff]">
+                        <svg class="stroke-[#335cff] transition-all duration-500 group-hover:stroke-white" width="30"
                             height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M10 27.5L15 25M15 25V21.25M15 25L20 27.5M8.75 14.375L12.5998 11.0064C13.1943 10.4862 14.1163 10.6411 14.5083 11.327L15.4917 13.048C15.8837 13.7339 16.8057 13.8888 17.4002 13.3686L21.25 10M2.5 2.5H27.5M26.25 2.5V13.25C26.25 17.0212 26.25 18.9069 25.0784 20.0784C23.9069 21.25 22.0212 21.25 18.25 21.25H11.75C7.97876 21.25 6.09315 21.25 4.92157 20.0784C3.75 18.9069 3.75 17.0212 3.75 13.25V2.5"
@@ -521,7 +636,8 @@
                         Turn tense texts into calm, persuasive replies with empathy-first, logic-backed drafts.
                     </p>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="100" class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                <div data-aos="fade-up" data-aos-delay="100"
+                    class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
                     <div
                         class="bg-pink-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-pink-600">
                         <svg class="stroke-pink-600 transition-all duration-500 group-hover:stroke-white" width="30"
@@ -547,7 +663,8 @@
                         Copy-paste friendly suggestions for WhatsApp, iMessage, Instagram DMs and more.
                     </p>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="200" class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                <div data-aos="fade-up" data-aos-delay="200"
+                    class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
                     <div
                         class="bg-teal-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-teal-600">
                         <svg class="stroke-teal-600 transition-all duration-500 group-hover:stroke-white" width="30"
@@ -564,7 +681,8 @@
                         Learn what tone and length work best for you and keep a consistent voice across chats.
                     </p>
                 </div>
-                <div data-aos="fade-up" data-aos-delay="300" class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
+                <div data-aos="fade-up" data-aos-delay="300"
+                    class="relative w-full text-center max-md:max-w-sm max-md:mx-auto group md:w-2/5 lg:w-1/4">
                     <div
                         class="bg-orange-50 rounded-lg flex justify-center items-center mb-5 w-20 h-20 mx-auto cursor-pointer transition-all duration-500 group-hover:bg-orange-600">
                         <svg class="stroke-orange-600 transition-all duration-500 group-hover:stroke-white" width="30"
@@ -591,13 +709,15 @@
     <section class="md:mt-32 mt-12">
         <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div
-                class="xl:p-24 md:gap-32 p-12 md:px-12 px-5 rounded-2xl bg-gradient-to-r from-indigo-600 to-violet-600 flex justify-between flex-col-reverse lg:flex-row">
+                class="xl:p-24 md:gap-32 p-12 md:px-12 px-5 rounded-2xl bg-gradient-to-r from-[#335cff] to-blue-800 flex justify-between flex-col-reverse lg:flex-row">
                 <div class="w-full lg:w-2/6 relative">
-                    <img data-aos="fade-up"  src="https://pagedone.io/asset/uploads/1696241449.png" alt="Adoura.ai app preview"
+                    <img data-aos="fade-up" src="https://pagedone.io/asset/uploads/1696241449.png"
+                        alt="Adoura.ai app preview"
                         class="xl:absolute xl:bottom-0 rounded-t-3xl -mb-12 mx-auto lg:-mb-12 xl:-mb-24 lg:mx-0 object-cover" />
                 </div>
                 <div class="w-full lg:w-2/3">
-                    <h2 data-aos="fade-up"  class="md:text-5xl text-4xl text-white font-medium mb-7 text-center lg:text-left">
+                    <h2 data-aos="fade-up"
+                        class="md:text-5xl text-4xl text-white font-medium mb-7 text-center lg:text-left">
                         Talk smarter in seconds.
                     </h2>
                     <p data-aos="fade-up" class="text-lg text-white leading-8 mb-12 text-center lg:text-left">
@@ -617,16 +737,17 @@
             <div
                 class="flex flex-col justify-center items-center gap-y-5 xl:gap-12 gap-8 lg:flex-row lg:justify-between max-lg:max-w-2xl mx-auto max-w-full">
                 <div class="w-full lg:w-1/2">
-                    <img data-aos="zoom-in"  src="/docs/assets/images/ai.webp" alt="FAQ tailwind section"
+                    <img data-aos="zoom-in" src="/docs/assets/images/ai.webp" alt="FAQ tailwind section"
                         class="w-full rounded-xl object-cover md:min-h-[45rem]" />
                 </div>
                 <div class="w-full lg:w-1/2">
                     <div class="">
                         <div class="">
-                            <h6 data-aos="fade-up"  class="text-lg text-center font-medium text-indigo-600 mb-2 lg:text-left">
+                            <h6 data-aos="fade-up"
+                                class="text-lg text-center font-medium text-[#335cff] mb-2 lg:text-left">
                                 faqs
                             </h6>
-                            <h2 data-aos="fade-up" 
+                            <h2 data-aos="fade-up"
                                 class="text-4xl md:text-4xl text-center font-semibold text-zinc-800 md:leading-[3.25rem] mb-5 lg:text-left">
                                 Looking for answers?
                             </h2>
@@ -828,35 +949,6 @@
     <script src="./docs/javascript/global.js"></script>
     <script src="./docs/javascript/navbar.js"></script>
     <script src="./docs/javascript/footer.js"></script>
-    <script>
-
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 10,
-            breakpoints: {
-                0: {
-                    slidesPerView: 1
-                },
-                640: {
-                    slidesPerView: 2
-                },
-                768: {
-                    slidesPerView: 4
-                },
-                1024: {
-                    slidesPerView: 5
-                }
-            },
-            navigation: {
-                nextEl: ".button-next",
-                prevEl: ".button-prev",
-            },
-            autoplay: {
-                delay: 3000,
-            },
-            loop: true,
-        });
-    </script>
 </body>
 
 </html>

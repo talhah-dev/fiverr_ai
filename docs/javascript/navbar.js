@@ -21,7 +21,7 @@ dynamic_navbar.innerHTML = `
             </div>
             <div class="md:flex items-center justify-center gap-4 hidden">
                 <a href="#pricing"
-                    class="md:block hidden transition-all duration-500 hover:opacity-80 px-10 py-2.5 uppercase rounded-lg text-white bg-indigo-500">Get Started Free</a>
+                    class="md:block hidden transition-all duration-500 hover:opacity-80 px-10 py-2.5 uppercase rounded-lg text-white bg-[#335cff]">Get Started Free</a>
             </div>
 
             <i class="fa-solid mobileMenuBtn text-zinc-800 fa-bars md:!hidden text-2xl cursor-pointer mr-2"></i>
@@ -44,7 +44,7 @@ dynamic_navbar.innerHTML = `
                         </li>
             </ul>
             <a href="#pricing"
-                class=" block text-nowrap transition-all duration-500 hover:opacity-80 px-6 py-3 uppercase rounded-lg text-white bg-indigo-500 text-center mt-3">Get Started Free</a>
+                class=" block text-nowrap transition-all duration-500 hover:opacity-80 px-6 py-3 uppercase rounded-lg text-white bg-[#335cff] text-center mt-3">Get Started Free</a>
         </div>
     </div>
 `

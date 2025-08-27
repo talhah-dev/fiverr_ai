@@ -10,7 +10,7 @@ footer.innerHTML = `
         </p>
         <div class="mt-7">
             <a href="#pricing"
-                class="w-full md:w-auto tracking-wider py-2 px-7 bg-indigo-500 text-center text-white rounded-sm border border-indigo-500 hover:opacity-70 transition-all duration-500">
+                class="w-full md:w-auto tracking-wider py-2 px-7 bg-[#335cff] text-center text-white rounded-sm border border-[#335cff] hover:opacity-70 transition-all duration-500">
                 Get Started Free
             </a>
         </div>
