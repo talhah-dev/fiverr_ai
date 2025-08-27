@@ -53,7 +53,7 @@
         </div>
         <div id="navbar"></div>
         <section
-            class="relative overflow-hidden md:mt-36 mt-32 md:min-h-[calc(100vh-10rem)] min-h-[calc(100vh-5rem)] bg-center bg-cover py-10 md:pb-20">
+            class="relative overflow-hidden md:mt-36 mt-28 md:min-h-[calc(100vh-10rem)] min-h-[calc(100vh-5rem)] bg-center bg-cover py-10 md:pb-20">
 
 
             <!-- Content -->
@@ -62,7 +62,7 @@
 
                 <script type="module"
                     src="https://unpkg.com/@splinetool/viewer@1.10.51/build/spline-viewer.js"></script>
-                <div class="max-w-[30rem] w-full absolute md:block hidden top-10 right-4">
+                <div class="max-w-[30rem] w-full absolute md:block hidden top-10 -right-10">
                     <div class="relative">
                         <div class="w-40 h-16 bg-white z-40 absolute bottom-1 right-0"></div>
                         <spline-viewer
@@ -76,28 +76,22 @@
                             <a href="https://www.trustpilot.com/review/adoura.ai" target="_blank" rel="noopener"
                                 class="group inline-flex items-center gap-3 rounded-full border border-gray-200 bg-white/70 backdrop-blur px-4 py-2 shadow-sm hover:shadow transition">
                                 <!-- Star Row -->
-                                <div class="flex items-center gap-0.5">
-                                    <!-- 5 stars, filled with #335cff -->
-                                    <svg width="16" height="16" viewBox="0 0 24 24" class="fill-[#335cff]">
-                                        <path
-                                            d="M12 17.3l-6.18 3.25 1.18-6.88L1 8.92l6.91-1L12 1.75l3.09 6.17 6.91 1-5 4.75 1.18 6.88z" />
-                                    </svg>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" class="fill-[#335cff]">
-                                        <path
-                                            d="M12 17.3l-6.18 3.25 1.18-6.88L1 8.92l6.91-1L12 1.75l3.09 6.17 6.91 1-5 4.75 1.18 6.88z" />
-                                    </svg>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" class="fill-[#335cff]">
-                                        <path
-                                            d="M12 17.3l-6.18 3.25 1.18-6.88L1 8.92l6.91-1L12 1.75l3.09 6.17 6.91 1-5 4.75 1.18 6.88z" />
-                                    </svg>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" class="fill-[#335cff]">
-                                        <path
-                                            d="M12 17.3l-6.18 3.25 1.18-6.88L1 8.92l6.91-1L12 1.75l3.09 6.17 6.91 1-5 4.75 1.18 6.88z" />
-                                    </svg>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" class="fill-[#335cff]">
-                                        <path
-                                            d="M12 17.3l-6.18 3.25 1.18-6.88L1 8.92l6.91-1L12 1.75l3.09 6.17 6.91 1-5 4.75 1.18 6.88z" />
-                                    </svg>
+                                <div class="flex items-center gap-1">
+                                    <div class="md:block hidden">
+                                        <i class="fa-solid fa-star text-[#335cff]"></i>
+                                    </div>
+                                    <div class="md:block hidden">
+                                        <i class="fa-solid fa-star text-[#335cff]"></i>
+                                    </div>
+                                    <div class="md:block hidden">
+                                        <i class="fa-solid fa-star text-[#335cff]"></i>
+                                    </div>
+                                    <div class="md:block hidden">
+                                        <i class="fa-solid fa-star text-[#335cff]"></i>
+                                    </div>
+                                    <div class="">
+                                        <i class="fa-solid fa-star text-[#335cff]"></i>
+                                    </div>
                                 </div>
 
                                 <span class="text-sm font-medium text-zinc-800">
@@ -115,7 +109,7 @@
 
                     <h1 data-aos="fade-up" data-aos-delay="200"
                         class="max-w-5xl textShadow mx-auto font-semibold text-3xl md:text-6xl text-zinc-800 leading-tight md:mb-2 mt-5 capitalize md:mb-10 mb-8">
-                        Talk smarter. Win arguments. Impress dates.
+                        Talk smarter. Win arguments. <span class="text-[#335cff]"> Impress dates.</span>
                     </h1>
 
                     <p data-aos="fade-up" data-aos-delay="300" class="text-zinc-700 md:mb-7 mb-10 text-lg space-y-3">
@@ -129,14 +123,14 @@
                     <div data-aos="fade-up" data-aos-delay="300"
                         class="flex items-center justify-center flex-col md:flex-row gap-5">
                         <a href="#"
-                            class="w-full md:w-auto tracking-wider py-3.5 md:py-4 px-7 md:px-16 font-medium  text-white rounded-sm border-2 border-[#335cff] bg-[#335cff] hover:opacity-70 transition-all duration-500">
+                            class="w-full md:w-auto tracking-wider py-3.5 md:py-4 px-7 md:px-16 font-medium  text-white md:rounded-sm rounded-2xl border-2 border-[#335cff] bg-[#335cff] hover:opacity-70 transition-all duration-500">
                             See Features
                         </a>
                     </div>
                 </div>
 
                 <div
-                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
+                    class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 md:mt-0 mt-10 gap-4 max-w-lg mx-auto md:max-w-2xl lg:max-w-full">
                     <div data-aos="fade-up" class="relative w-full h-auto md:col-span-2">
                         <div class="bg-gray-800 rounded-2xl flex  justify-between flex-row flex-wrap">
                             <div class="p-5  xl:p-8 w-full md:w-1/2 ">
@@ -265,7 +259,7 @@
 
         <h2 data-aos="fade-up"
             class="text-center md:text-5xl text-2xl max-w-3xl capitalize leading-tight mx-auto font-semibold text-zinc-800">
-            Everything you need to text smarter
+            Everything you need to <span class="text-[#335cff]"> text smarter</span>
         </h2>
         <p data-aos="fade-up" class="text-zinc-600 max-w-3xl mx-auto pt-3 text-center">
             Adoura.ai helps you handle everyday chats — persuasive comebacks, smooth openers, flowing banter, and
@@ -511,7 +505,7 @@
 
         <h2 data-aos="fade-up"
             class="text-center md:text-5xl text-2xl max-w-3xl capitalize leading-tight mx-auto font-semibold text-zinc-800">
-            Create viral clips in 3 simple steps
+            Create viral clips in <span class="text-[#335cff]">3 simple steps</span>
 
 
         </h2>
@@ -519,7 +513,7 @@
             Never manually stitch a clip or generate subtitles by hand ever again.
         </p>
 
-        <div id="how-it-works" class="md:mt-16 mt-10">
+        <div data-aos="fade-up" id="how-it-works" class="md:mt-16 mt-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 md:gap-10 gap-5 items-start">
                 <!-- Steps (left) -->
                 <div class="space-y-4" role="tablist" aria-label="Get a response in 3 simple steps">
@@ -579,7 +573,7 @@
                 <div class="w-full lg:w-1/2">
                     <h2 data-aos="fade-up"
                         class="md:text-5xl text-4xl text-zinc-800 font-semibold md:leading-[4rem] mb-7 text-center lg:text-left">
-                        Built by humans. Tuned for real conversations.
+                        Built by humans. Tuned for <span class="text-[#335cff]">real conversations.</span>
                     </h2>
                     <p data-aos="fade-up" class="text-lg text-gray-500 mb-10 text-center lg:text-left">
                         We’re a focused team crafting Adoura.ai — practical AI that helps you send persuasive comebacks,
@@ -625,7 +619,7 @@
 
         <h2 data-aos="fade-up"
             class="text-center md:text-5xl text-2xl max-w-3xl capitalize leading-tight mx-auto font-semibold text-zinc-800">
-            Keep up with trends and Go Viral
+            Keep up with trends and <span class="text-[#335cff]">Go Viral</span>
         </h2>
         <p data-aos="fade-up" class="text-zinc-600 max-w-3xl mx-auto pt-3 text-center">
             Never manually stitch a clip or generate subtitles by hand ever again.
@@ -682,7 +676,7 @@
                     class="py-1 px-4 bg-blue-100 rounded-full text-xs font-medium text-[#335cff] text-center">Why
                     Adoura.ai</span>
                 <h2 data-aos="fade-up" class="text-4xl md:text-5xl text-center font-semibold text-zinc-800 py-5">
-                    Built for real-life conversations
+                    Built for real-life <span class="text-[#335cff]">conversations</span>
                 </h2>
                 <p data-aos="fade-up" class="text-lg font-normal text-gray-500 max-w-md md:max-w-2xl mx-auto">
                     From persuasive comebacks to smooth openers and thoughtful plans, Adoura.ai helps you respond fast,
@@ -958,7 +952,7 @@
             data-aos="fade-up">What users say
         </h2>
         <p class="text-center text-zinc-600 mt-5 max-w-4xl mx-auto md:text-lg" data-aos="fade-up">
-            Real feedback from people leveling up their chats with <strong>Adoura.ai</strong>.
+            Real feedback from people leveling up their chats with <strong class="text-[#335cff]">Adoura.ai</strong>.
         </p>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:mt-16 mt-8">
 
