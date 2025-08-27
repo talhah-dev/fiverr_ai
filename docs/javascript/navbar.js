@@ -59,15 +59,24 @@ let prevScrollPos = window.scrollY;
 
 window.addEventListener("scroll", () => {
     const currentScrollPos = window.scrollY;
-    if (currentScrollPos > prevScrollPos) {
-        // Scrolling down
-        navbar.style.transform = `translateY(-9rem)`;
-    } else {
-        // Scrolling up
+
+    if (currentScrollPos <= 300) {
+        // Always show navbar within first 300px
         navbar.style.transform = `translateY(0%)`;
+    } else {
+        // Apply hide/show logic after 300px
+        if (currentScrollPos > prevScrollPos) {
+            // Scrolling down
+            navbar.style.transform = `translateY(-9rem)`;
+        } else {
+            // Scrolling up
+            navbar.style.transform = `translateY(0%)`;
+        }
     }
+
     prevScrollPos = currentScrollPos;
 });
+
 
 mobileMenuBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
